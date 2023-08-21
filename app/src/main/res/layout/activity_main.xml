@@ -25,26 +25,52 @@
         android:checkedButton="@id/option_twenty_percent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/service_question"
+        app:layout_constraintTop_toBottomOf="@id/cost_of_service"
         app:layout_constraintStart_toStartOf="parent"
         android:orientation="vertical">
 
+        <RadioButton
+            android:id="@+id/KgParaLibra"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kg -> lbs"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="173dp" />
+
+        <RadioButton
+            android:id="@+id/libraParaKg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="lbs -> Kg"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="237dp" />
+
+
+
     </RadioGroup>
 
-    <RadioButton
-        android:id="@+id/option_twenty_percent"
+    <Button
+        android:id="@+id/calcular"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Kg -> lbs"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="173dp" />
+        android:drawableStart="@drawable/baseline_android_24"
+        android:drawablePadding="4dp"
+        android:drawableTint="#ff0000"
+        android:text="Calcular"
+        tools:layout_editor_absoluteX="-1dp"
+        tools:layout_editor_absoluteY="220dp" />
 
-    <RadioButton
-        android:id="@+id/option_eighteen_percent"
-        android:layout_width="wrap_content"
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
-        android:text="lbs -> Kg (18%)"
-        tools:layout_editor_absoluteX="24dp"
-        tools:layout_editor_absoluteY="256dp" />
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="272dp"
+        android:hint="Resultado:"
+        android:inputType="numberDecimal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
